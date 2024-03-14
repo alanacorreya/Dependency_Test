@@ -4,27 +4,21 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    labels:
-      - "dependencies"
-      - "maven"
-      - "update"
+    open-pull-requests-limit:
+      # Set the limit according to your needs
+      # For example, limit to 5 open pull requests at a time
+      limit: 5
+    allow:
+      - dependency-name: "*"
+        security-updates: true
     commit-message:
       prefix: "chore(deps):"
-    reviewers:
-      - username: "reviewer1"
-        # Add more reviewers as needed
-    assignees:
-      - username: "assignee1"
-        # Add more assignees as needed
-    open-pull-requests-limit: 5
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
       interval: "daily"
     allow:
       - dependency-name: "*"
-        security-updates: true
-    labels:
-      - "security"
+        versioning-strategy: "widen"
     commit-message:
-      prefix: "fix(deps):"
+      prefix: "chore(deps):"
