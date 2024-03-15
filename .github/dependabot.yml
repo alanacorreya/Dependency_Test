@@ -28,7 +28,7 @@ updates:
       - teams:
           - "alana.correya@ust.com"
     assignees:
-      - "alana.correya@ust.com"
+      - "keerthi.nallattesoman@ust.com"
     labels:
       - "dependencies"
       - "security"
